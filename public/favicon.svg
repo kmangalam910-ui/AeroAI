@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#0b2240"/>
+      <stop offset="55%" stop-color="#071322"/>
+      <stop offset="100%" stop-color="#030811"/>
+    </radialGradient>
+
+    <!-- Neon Cyan & Sky Blue Gradients -->
+    <linearGradient id="neonCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <linearGradient id="wingGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="60%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+
+    <linearGradient id="wingGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+
+    <linearGradient id="wingGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="62%" stop-color="#ffffff"/>
+      <stop offset="78%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="coreGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark Atmospheric Background -->
+  <rect width="1000" height="700" fill="url(#bgGlow)"/>
+
+  <!-- Logo Icon Container -->
+  <g id="logo-mark" filter="url(#coreGlow)">
+    
+    <!-- Outer Cloud Line & Chevron Base -->
+    <path d="M 525 320 
+             L 605 320 
+             A 38 38 0 0 0 635 258 
+             A 52 52 0 0 0 545 210 
+             A 42 42 0 0 0 458 245 
+             A 40 40 0 0 0 435 285" 
+          fill="none" 
+          stroke="url(#neonCyanGrad)" 
+          stroke-width="16" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Bar-Chart / Shield Valley Underneath -->
+    <path d="M 470 365 
+             L 505 400 
+             L 575 330 
+             M 500 375 
+             L 500 340 
+             M 535 370 
+             L 535 315" 
+          fill="none" 
+          stroke="url(#neonCyanGrad)" 
+          stroke-width="12" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Left Cyber Wing Feathers -->
+    <!-- Top Feather -->
+    <path d="M 370 185 
+             C 382 245 425 285 490 305 
+             C 440 300 380 265 370 185 Z" 
+          fill="url(#wingGrad1)"/>
+    
+    <!-- Middle Feather -->
+    <path d="M 378 245 
+             C 395 285 435 320 480 332 
+             C 435 325 390 298 378 245 Z" 
+          fill="url(#wingGrad2)"/>
+
+    <!-- Lower Feather -->
+    <path d="M 390 305 
+             C 410 335 440 358 475 365 
+             C 440 360 408 340 390 305 Z" 
+          fill="url(#wingGrad3)"/>
+
+    <!-- Dynamic Swoop & Forecast Growth Arrow -->
+    <path d="M 448 405 
+             C 442 360 460 325 570 248 
+             L 555 240 
+             L 582 232 
+             L 574 260 
+             L 560 252 
+             C 475 318 456 350 448 405 Z" 
+          fill="url(#neonCyanGrad)" 
+          stroke="url(#neonCyanGrad)" 
+          stroke-width="3" 
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Typography -->
+  <g id="typography" text-anchor="middle">
+    <!-- Brand Name: AeroAI -->
+    <text x="500" y="525" 
+          fill="url(#textGrad)" 
+          font-family="system-ui, -apple-system, 'Geist', 'Segoe UI', sans-serif" 
+          font-size="82" 
+          font-weight="800" 
+          letter-spacing="2"
+          filter="url(#softGlow)">
+      AeroAI
+    </text>
+
+    <!-- Subtitle: WEATHER INTELLIGENCE -->
+    <text x="500" y="565" 
+          fill="#94A3B8" 
+          font-family="system-ui, -apple-system, 'Geist', 'Segoe UI', sans-serif" 
+          font-size="18" 
+          font-weight="600" 
+          letter-spacing="9">
+      WEATHER INTELLIGENCE
+    </text>
+  </g>
+</svg>
