@@ -133,7 +133,7 @@ const HourlyWeatherTab = () => {
       </div>
 
       <Tabs value={tab} onValueChange={(value) => setTab(value as Tab)}>
-        <TabsList className="bg-secondary/40 border border-border/40 p-1 gap-1 overflow-x-auto justify-start scrollbar-none rounded-xl mb-4 w-full">
+        <TabsList className="bg-secondary/40 border border-border/40 p-1 gap-1 overflow-x-auto overflow-y-hidden justify-start scrollbar-none rounded-xl mb-4 w-full">
           {TABS_LIST.map(({ title, value }) => (
             <TabsTrigger
               key={value}

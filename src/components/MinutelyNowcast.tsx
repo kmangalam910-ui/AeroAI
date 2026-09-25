@@ -94,7 +94,7 @@ const MinutelyNowcast = () => {
             return (
               <div
                 key={t}
-                className="flex-shrink-0 flex flex-col items-center justify-between p-2.5 min-w-[76px] rounded-xl bg-secondary/50 border border-border/40 text-xs text-center"
+                className="shrink grow flex flex-col items-center justify-between p-2.5 min-w-[76px] rounded-xl bg-secondary/50 border border-border/40 text-xs text-center"
               >
                 <span className="font-bold text-[11px] text-muted-foreground">{timeFormatted}</span>
                 <span className="font-extrabold text-sm my-1">{temp}°</span>
