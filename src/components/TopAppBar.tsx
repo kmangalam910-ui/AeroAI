@@ -1,3 +1,4 @@
+import logo from "../assets/Logo.png";
 import { SearchDialog, ThemeDropdown, UnitDropdown } from "./index";
 
 const TopAppBar = () => {
@@ -6,8 +7,8 @@ const TopAppBar = () => {
     <header className="py-4 border shadow-lg rounded-2xl">
       <div className="px-4 flex items-center justify-between bg-background/50 backdrop-blur-lg">
         <img
-          src="/assets/Logo.png"
-          alt="logo"
+          src={logo}
+          alt="AeroAI logo"
           className="h-16 w-24 rounded-2xl"
         />
         <SearchDialog />
